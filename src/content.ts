@@ -1,7 +1,5 @@
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((_message, _sender, sendResponse) => {
   alert('Hello Chrome Extension!');
-  console.log('message', message);
-  console.log('sender', sender);
   sendResponse();
   return true;
 });
