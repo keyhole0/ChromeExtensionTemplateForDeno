@@ -1,0 +1,22 @@
+{
+  "name": "ChromeExtensionTemplateForDeno",
+  "description": "ChromeExtensionTemplateForDeno",
+  "version": "0.1",
+  "manifest_version": 3,
+  "action": {},
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ]
+}

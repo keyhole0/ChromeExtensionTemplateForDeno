@@ -1,0 +1,22 @@
+{
+  "tasks": {
+    "hello": "echo hello!",
+    "build": "rm -rf ./dist/ && cp -r ./public ./dist && deno bundle ./src/content.ts ./dist/content.js & deno bundle ./src/background.ts ./dist/background.js"
+  },
+  "fmt": {
+    "files": {
+      "include": ["src/"],
+      "exclude": ["src/testdata/"]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 80,
+      "indentWidth": 2,
+      "singleQuote": true,
+      "proseWrap": "always"
+    }
+  },
+  "compilerOptions" :  {
+    "lib": [ "dom" ,  "dom.iterable" ,  "dom.asynciterable" ,  "deno.ns" ]
+  }
+}
